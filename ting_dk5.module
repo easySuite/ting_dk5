@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * Ting DK5 settings module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ting_dk5_menu() {
+  $items = array();
+
+  $items['admin/config/ting/dk5'] = array(
+    'title' => 'Ting DK5 Settings',
+    'description' => 'Configure DK5 settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ting_dk5_settings'),
+    'access arguments' => array('administer ting_dk5 settings'),
+    'file' => 'ting_dk5.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function ting_dk5_permission() {
+  return array(
+    'administer ting_dk5 settings' => array(
+      'title' => t('Administer Ting DK5 settings'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_attach_view_alter().
+ *
+ * Hide existing DK5 fields on collection and item pages.
+ */
+function ting_dk5_field_attach_view_alter(&$output, $context) {
+  // Check if we have DK5 field.
+  if (empty($output['ting_details_classification'])) {
+    return;
+  }
+  $view_mode = $output['ting_details_classification']['#view_mode'];
+  // Check if it is a necessary view mode.
+  if (in_array(
+    $view_mode,
+    array(
+      'collection_primary',
+      '_custom_display',
+      'teaser',
+    )
+  )
+  ) {
+    // If the box is unchecked remove the field to hide it.
+    $value = variable_get('ting_dk5_show_' . $view_mode, 1);
+    if ($value == 0) {
+      unset($output['ting_details_classification']);
+    }
+  }
+}
+
+include_once 'ting_dk5.features.inc';
