@@ -2,6 +2,8 @@
 /**
  * @file
  * ting_dk5.features.inc
+ *
+ * Warning!!! This file was edited manually to correctly reorder fields.
  */
 
 /**
@@ -12,7 +14,10 @@ function ting_dk5_field_default_fields_alter(&$data) {
     $data['ting_object-ting_object-ting_details_classification']['field_instance']['display']['teaser']['label'] = 'inline'; /* WAS: 'above' */
     $data['ting_object-ting_object-ting_details_classification']['field_instance']['display']['teaser']['module'] = 'ding_ting_frontend'; /* WAS: '' */
     $data['ting_object-ting_object-ting_details_classification']['field_instance']['display']['teaser']['type'] = 'ting_details_single'; /* WAS: 'hidden' */
-    $data['ting_object-ting_object-ting_details_classification']['field_instance']['display']['teaser']['weight'] = '40'; /* WAS: '37' */
+
+    // Set DK5 after author field.
+    $data['ting_object-ting_object-ting_details_classification']['field_instance']['display']['teaser']['weight']
+      = $data['ting_object-ting_object-ting_author']['field_instance']['display']['teaser']['weight'] + 1;
   }
 }
 
