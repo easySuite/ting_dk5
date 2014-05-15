@@ -8,7 +8,7 @@
  * Implements hook_uninstall().
  */
 function ting_dk5_uninstall() {
-  $view_modes = array('collection_primary', '_custom_display', 'teaser');
+  $view_modes = array('collection_list', 'full', 'search_result');
   foreach ($view_modes as $mode) {
     variable_del('ting_dk5_show_' . $mode);
   }
