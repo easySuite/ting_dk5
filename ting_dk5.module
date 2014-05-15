@@ -48,9 +48,9 @@ function ting_dk5_field_attach_view_alter(&$output, $context) {
   if (in_array(
     $view_mode,
     array(
-      'collection_primary',
-      '_custom_display',
-      'teaser',
+      'collection_list',
+      'full',
+      'search_result',
     )
   )
   ) {
