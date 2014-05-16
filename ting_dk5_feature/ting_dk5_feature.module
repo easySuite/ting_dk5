@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Ting dk5 feature feature.
- */
-
-include_once 'ting_dk5_feature.features.inc';
