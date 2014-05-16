@@ -44,16 +44,14 @@ function ting_dk5_field_attach_view_alter(&$output, $context) {
     return;
   }
   $view_mode = $output['ting_details_classification']['#view_mode'];
+
   // Check if it is a necessary view mode.
-  if (in_array(
-    $view_mode,
-    array(
-      'collection_primary',
-      '_custom_display',
-      'teaser',
-    )
-  )
-  ) {
+  $available_modes = array(
+    'collection_list',
+    'full',
+    'search_result',
+  );
+  if (in_array($view_mode, $available_modes)) {
     // If the box is unchecked remove the field to hide it.
     $value = variable_get('ting_dk5_show_' . $view_mode, 1);
     if ($value == 0) {
@@ -61,5 +59,3 @@ function ting_dk5_field_attach_view_alter(&$output, $context) {
     }
   }
 }
-
-include_once 'ting_dk5.features.inc';
