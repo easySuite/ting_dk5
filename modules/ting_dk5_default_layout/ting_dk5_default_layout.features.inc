@@ -23,6 +23,18 @@ function ting_dk5_default_layout_field_group_info_alter(&$data) {
         7 => 'ting_subjects',
       ),
       'format_type' => 'div',
+      'format_settings' => array(
+        'label' => 'Right column',
+        'instance_settings' => array(
+          'classes' => '',
+          'description' => '',
+          'show_label' => 0,
+          'label_element' => 'h3',
+          'effect' => 'none',
+          'speed' => 'fast',
+        ),
+        'formatter' => 'open',
+      ),
     ); /* WAS: '' */
   }
   if (isset($data['group_ting_right_col_search|ting_object|ting_object|search_result'])) {

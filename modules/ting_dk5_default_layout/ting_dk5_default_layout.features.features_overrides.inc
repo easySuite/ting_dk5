@@ -26,6 +26,18 @@ function ting_dk5_default_layout_features_override_default_overrides() {
       7 => 'ting_subjects',
     ),
     'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Right column',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => 0,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
   );
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|0"] = 'ting_details_classification';
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|1"] = 'ting_title';
