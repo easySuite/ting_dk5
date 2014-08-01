@@ -1,8 +1,6 @@
 name = Ting DK5 Settings
-description = DK5 Settings
+description = Control where DK5 (classification) field will be shown
 core = 7.x
-package = easyDDB
-php = 5.2.4
+package = EasyDDB
 version = 7.x-1.19
-project = ting_dk5
 configure = admin/config/ting/dk5
