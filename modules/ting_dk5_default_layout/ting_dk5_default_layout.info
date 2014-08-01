@@ -1,0 +1,15 @@
+name = Ting DK5 default layout
+description = DK5 (classification) field position overrides inside ting related displays
+core = 7.x
+package = EasyDDB
+features[features_api][] = api:2
+features[features_overrides][] = field_instance.ting_object-ting_object-ding_entity_buttons.display|collection_list|weight
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_abstract.display|collection_list|weight
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|collection_list|label
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|collection_list|module
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|collection_list|type
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|collection_list|weight
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|default|weight
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_details_classification.display|search_result
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_series.display|collection_list|weight
+features[features_overrides][] = field_instance.ting_object-ting_object-ting_subjects.display|collection_list|weight
