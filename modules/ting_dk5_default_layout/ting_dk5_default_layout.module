@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Ting DK5 default layout feature.
- */
-
-include_once 'ting_dk5_default_layout.features.inc';
