@@ -1,0 +1,66 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ting_dk5.admin.inc: n/a
+#  ting_dk5.module: n/a
+#  ting_dk5.info: n/a
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-19 16:14+0100\n"
+"PO-Revision-Date: 2015-02-20 15:50+0100\n"
+"Last-Translator: Martin Cording <mc@inlead.dk>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Language: da\n"
+"X-Generator: Poedit 1.7.4\n"
+
+#: ting_dk5.admin.inc:18
+msgid "Show DK5 on collection page"
+msgstr "Vis DK5 på værksamlinger"
+
+#: ting_dk5.admin.inc:20
+msgid "Check to show DK5 field on Ting collection page."
+msgstr "Marker for at vise DK5 på værkpostsiden."
+
+#: ting_dk5.admin.inc:27
+msgid "Show DK5 on item page"
+msgstr "Vis DK5 på poster"
+
+#: ting_dk5.admin.inc:29
+msgid "Check to show DK5 field on Ting item page."
+msgstr "Marker for at vise DK5 på materialesiderne."
+
+#: ting_dk5.admin.inc:36
+msgid "Show DK5 in search result"
+msgstr "Vis DK5 på søgeresultatet"
+
+#: ting_dk5.admin.inc:38
+msgid "Check to show DK5 field on search result page."
+msgstr "Marker for at vise DK5 på søgeresultatsiden."
+
+#: ting_dk5.module:31
+msgid "Administer Ting DK5 settings"
+msgstr "Administrer DK5 indstillinger"
+
+#: ting_dk5.module:14 ting_dk5.info:0
+msgid "Ting DK5 Settings"
+msgstr "DK5 indstillinger"
+
+#: ting_dk5.module:15
+msgid "Configure DK5 settings."
+msgstr "Konfigurer DK5 indstillinger"
+
+#: ting_dk5.info:0
+msgid "Control where DK5 (classification) field will be shown"
+msgstr "Kontroller hvor DK5 (klassifikation) feltet skal vises"
+
+#: ting_dk5.info:0
+msgid "easyDDB"
+msgstr ""

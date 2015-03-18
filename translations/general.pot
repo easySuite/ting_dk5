@@ -1,0 +1,66 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ting_dk5.admin.inc: n/a
+#  ting_dk5.module: n/a
+#  ting_dk5.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-19 16:14+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ting_dk5.admin.inc:18
+msgid "Show DK5 on collection page"
+msgstr ""
+
+#: ting_dk5.admin.inc:20
+msgid "Check to show DK5 field on Ting collection page."
+msgstr ""
+
+#: ting_dk5.admin.inc:27
+msgid "Show DK5 on item page"
+msgstr ""
+
+#: ting_dk5.admin.inc:29
+msgid "Check to show DK5 field on Ting item page."
+msgstr ""
+
+#: ting_dk5.admin.inc:36
+msgid "Show DK5 in search result"
+msgstr ""
+
+#: ting_dk5.admin.inc:38
+msgid "Check to show DK5 field on search result page."
+msgstr ""
+
+#: ting_dk5.module:31
+msgid "Administer Ting DK5 settings"
+msgstr ""
+
+#: ting_dk5.module:14 ting_dk5.info:0
+msgid "Ting DK5 Settings"
+msgstr ""
+
+#: ting_dk5.module:15
+msgid "Configure DK5 settings."
+msgstr ""
+
+#: ting_dk5.info:0
+msgid "Control where DK5 (classification) field will be shown"
+msgstr ""
+
+#: ting_dk5.info:0
+msgid "easyDDB"
+msgstr ""
+

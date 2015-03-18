@@ -14,7 +14,7 @@ function ting_dk5_menu() {
     'title' => 'Ting DK5 Settings',
     'description' => 'Configure DK5 settings.',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('ting_dk5_settings'),
+    'page arguments' => array('ting_dk5_settings_admin_form'),
     'access arguments' => array('administer ting_dk5 settings'),
     'file' => 'ting_dk5.admin.inc',
   );
@@ -34,28 +34,71 @@ function ting_dk5_permission() {
 }
 
 /**
- * Implements hook_field_attach_view_alter().
+ * Define default display settings for various modes.
  *
- * Hide existing DK5 fields on collection and item pages.
+ * @param string $mode
+ *   View mode.
+ *
+ * @return array
+ *   Field instance view mode settings.
  */
-function ting_dk5_field_attach_view_alter(&$output, $context) {
-  // Check if we have DK5 field.
-  if (empty($output['ting_details_classification'])) {
+function ting_dk5_view_mode_settings($mode) {
+  $modes = array();
+
+  $modes['default'] = array(
+    'label' => 'inline',
+    'module' => 'ting_material_details',
+    'settings' => array(),
+    'type' => 'ting_details_linked_dk5',
+    'weight' => 50,
+  );
+
+  $modes['search_result'] = array(
+    'label' => 'hidden',
+    'module' => 'ting_material_details',
+    'settings' => array(),
+    'type' => 'ting_details_linked_dk5',
+    'weight' => 20,
+  );
+
+  $modes['collection_list'] = array(
+    'label' => 'hidden',
+    'module' => 'ting_material_details',
+    'settings' => array(),
+    'type' => 'ting_details_linked_dk5',
+    'weight' => 7,
+  );
+
+  $modes['_hidden_'] = array(
+    'label' => 'hidden',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 99,
+  );
+
+  return isset($modes[$mode]) ? $modes[$mode] : array();
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function ting_dk5_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type != 'ting_object') {
     return;
   }
-  $view_mode = $output['ting_details_classification']['#view_mode'];
 
-  // Check if it is a necessary view mode.
-  $available_modes = array(
-    'collection_list',
-    'full',
-    'search_result',
-  );
-  if (in_array($view_mode, $available_modes)) {
-    // If the box is unchecked remove the field to hide it.
-    $value = variable_get('ting_dk5_show_' . $view_mode, 1);
-    if ($value == 0) {
-      unset($output['ting_details_classification']);
-    }
+  $group = FALSE;
+  if ($view_mode == 'default') {
+    $group = 'group_ting_object_right_column';
+  }
+  elseif ($view_mode == 'search_result') {
+    $group = 'group_ting_right_col_search';
+  }
+  elseif ($view_mode == 'collection_list') {
+    $group = 'group_ting_right_col_collection';
+  }
+
+  if ($group) {
+    $entity->content['#group_children']['ting_details_classification'] = $group;
   }
 }
