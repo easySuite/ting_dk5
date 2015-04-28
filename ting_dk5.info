@@ -2,6 +2,6 @@ name = Ting DK5 Settings
 description = Control where DK5 (classification) field will be shown
 core = 7.x
 package = easyDDB
-version = 7.x-2.0.0
+version = 7.x-2.0.0+easy
 configure = admin/config/ting/dk5
 
