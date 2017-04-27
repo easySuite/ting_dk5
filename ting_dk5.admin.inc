@@ -17,21 +17,21 @@ function ting_dk5_settings_admin_form($form, &$form_state) {
   $form['ting_dk5_show_collection_list'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show DK5 on collection page'),
-    '#default_value' => variable_get('ting_dk5_show_collection_list', TRUE),
+    '#default_value' => variable_get('ting_dk5_show_collection_list', FALSE),
     '#description' => t("Check to show DK5 field on Ting collection page."),
   );
 
   $form['ting_dk5_show_default'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show DK5 on item page'),
-    '#default_value' => variable_get('ting_dk5_show_default', TRUE),
+    '#default_value' => variable_get('ting_dk5_show_default', FALSE),
     '#description' => t("Check to show DK5 field on Ting item page."),
   );
 
   $form['ting_dk5_show_search_result'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show DK5 in search result'),
-    '#default_value' => variable_get('ting_dk5_show_search_result', TRUE),
+    '#default_value' => variable_get('ting_dk5_show_search_result', FALSE),
     '#description' => t("Check to show DK5 field on search result page."),
   );
 
