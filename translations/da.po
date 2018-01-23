@@ -62,5 +62,5 @@ msgid "Control where DK5 (classification) field will be shown"
 msgstr "Kontroller hvor DK5 (klassifikation) feltet skal vises"
 
 #: ting_dk5.info:0
-msgid "easyDDB"
+msgid "easyOPAC"
 msgstr ""
